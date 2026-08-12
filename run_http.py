@@ -1,0 +1,18 @@
+"""QQ Music MCP Server - HTTP Transport"""
+import os
+import sys
+from pathlib import Path
+
+# 添加 src 目录到路径
+src_dir = Path(__file__).parent / "src"
+if str(src_dir) not in sys.path:
+    sys.path.insert(0, str(src_dir))
+
+from qq_music_api.server import mcp
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8080))
+    mcp.run(
+        transport="streamable-http",
+        host="0.0.0.0",
+        port=port,)
