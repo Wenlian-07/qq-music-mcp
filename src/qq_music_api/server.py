@@ -6,7 +6,7 @@ import sys
 from pathlib import Path
 from typing import Literal
 
-from mcp.server.fastmcp import FastMCP
+from fastmcp import FastMCP
 from dotenv import load_dotenv
 
 # 支持直接运行和作为模块导入两种方式
