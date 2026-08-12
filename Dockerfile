@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY . .
 
-RUN pip install --no-cache-dir mcp[cli] httpx python-dotenv
+RUN pip install --no-cache-dir fastmcp httpx python-dotenv qqmusic-api-python
 
 ENV PORT=8080
 EXPOSE 8080
